@@ -25,7 +25,7 @@ Represents the response for powsrv.io attach to tangle command.
 
 **● trytes**: *`string`[]*
 
-*Defined in models/IAttachToTangleResponse.ts:9*
+*Defined in [models/IAttachToTangleResponse.ts:9](https://github.com/iota-pico/pow-srvio/tree/master/src/models/IAttachToTangleResponse.ts#L9*
 
 The trytes from the pow.
 

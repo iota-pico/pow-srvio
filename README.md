@@ -3,14 +3,15 @@
 
 # IOTA Pico Framework Proof Of Work Remote for powsrv.io
 
-The library contains the Curl proof of work algorithm using the remote service at https://powsrv.io.
+The library contains the Curl proof of work algorithm using the remote service at https://powsrv.io
 
 # Example
 
 ```typescript
-const networkClientApi = new NetworkClient(new NetworkEndPoint("https", "nodes.iota.fm", 443));
-const pow = new ProofOfWorkSrvIo(networkClientPowSrv, /* api key if you have one */);
 const networkClientPowSrv = new NetworkClient(new NetworkEndPoint("https", "api.powsrv.io", 443));
+const pow = new ProofOfWorkSrvIo(networkClientPowSrv, /* api key if you have one */);
+
+const networkClientApi = new NetworkClient(new NetworkEndPoint("https", "nodes.iota.fm", 443));
 const apiClient = new ApiClient(networkClientApi);
 const transactionClient = new TransactionClient(apiClient, pow);
 

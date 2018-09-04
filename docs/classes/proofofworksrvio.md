@@ -33,7 +33,7 @@ ProofOfWork implementation using Remote [https://powsrv.io](https://powsrv.io).
 
 ⊕ **new ProofOfWorkSrvIo**(networkClient: *`INetworkClient`*, apiKey?: *`string`*): [ProofOfWorkSrvIo](proofofworksrvio.md)
 
-*Defined in proofOfWorkSrvIo.ts:19*
+*Defined in [proofOfWorkSrvIo.ts:19](https://github.com/iota-pico/pow-srvio/tree/master/src/proofOfWorkSrvIo.ts#L19*
 
 Create an instance of ProofOfWork.
 
@@ -56,7 +56,7 @@ ___
 
 ▸ **initialize**(): `Promise`<`void`>
 
-*Defined in proofOfWorkSrvIo.ts:39*
+*Defined in [proofOfWorkSrvIo.ts:39](https://github.com/iota-pico/pow-srvio/tree/master/src/proofOfWorkSrvIo.ts#L39*
 
 Allow the proof of work to perform any initialization. Will throw an exception if the implementation is not supported.
 
@@ -70,7 +70,7 @@ ___
 
 ▸ **pow**(trunkTransaction: *`Hash`*, branchTransaction: *`Hash`*, trytes: *`Trytes`[]*, minWeightMagnitude: *`number`*): `Promise`<`Trytes`[]>
 
-*Defined in proofOfWorkSrvIo.ts:51*
+*Defined in [proofOfWorkSrvIo.ts:51](https://github.com/iota-pico/pow-srvio/tree/master/src/proofOfWorkSrvIo.ts#L51*
 
 Perform a proof of work on the data.
 
