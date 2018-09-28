@@ -298,7 +298,7 @@ export class ProofOfWorkSrvIo implements IProofOfWork {
             additionalHeaders.Authorization = `powsrv-token ${this._apiKey}`;
         }
 &nbsp;
-        const attachToTangleResponse = await this._networkClient.postJson&lt;IAttachToTangleRequest, IAttachToTangleResponse&gt;(attachToTangleRequest, undefined, additionalHeaders);
+        const attachToTangleResponse = await this._networkClient.json&lt;IAttachToTangleRequest, IAttachToTangleResponse&gt;(attachToTangleRequest, "POST", undefined, additionalHeaders);
 &nbsp;
         if (ObjectHelper.isEmpty(attachToTangleResponse) || ArrayHelper.isEmpty(attachToTangleResponse.trytes)) {
             throw new CryptoError("The attachToTangleRequest did not return a response");
