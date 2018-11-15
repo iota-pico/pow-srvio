@@ -39,7 +39,7 @@ Create an instance of ProofOfWork.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | networkClient | `INetworkClient` |  The network client to communicate through. |
 | `Optional` apiKey | `string` |  The API key to access the pow box. |
@@ -76,7 +76,7 @@ Perform a proof of work on the data.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | trunkTransaction | `Hash` |  The trunkTransaction to use for the pow. |
 | branchTransaction | `Hash` |  The branchTransaction to use for the pow. |
