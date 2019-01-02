@@ -117,7 +117,7 @@ describe("ProofOfWorkSrvIo", () => {
         });
 
         it("can successfully complete with actual connectivity", async () => {
-            const networkClientApi = new NetworkClient(new NetworkEndPoint("https", "nodes.iota.fm", 443));
+            const networkClientApi = new NetworkClient(new NetworkEndPoint("https", "nodes.devnet.iota.org", 443));
             const networkClientPowSrv = new NetworkClient(new NetworkEndPoint("https", "api.powsrv.io", 443));
             const apiClient = new ApiClient(networkClientApi);
             const pow = new ProofOfWorkSrvIo(networkClientPowSrv);
