@@ -3,6 +3,7 @@
 # Interface: IAttachToTangleRequest
 
 Represents the request for powsrv.io attach to tangle command.
+
 *__interface__*: 
 
 ## Hierarchy

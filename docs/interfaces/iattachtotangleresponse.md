@@ -3,6 +3,7 @@
 # Interface: IAttachToTangleResponse
 
 Represents the response for powsrv.io attach to tangle command.
+
 *__interface__*: 
 
 ## Hierarchy
