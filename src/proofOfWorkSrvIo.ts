@@ -70,7 +70,7 @@ export class ProofOfWorkSrvIo implements IProofOfWork {
             trytes: trytes.map(t => t.toString())
         };
 
-        const additionalHeaders: { [id: string]: string } = { };
+        const additionalHeaders: { [id: string]: string } = {};
 
         if (this._apiKey) {
             additionalHeaders.Authorization = `powsrv-token ${this._apiKey}`;
@@ -80,8 +80,7 @@ export class ProofOfWorkSrvIo implements IProofOfWork {
 
         if (ObjectHelper.isEmpty(attachToTangleResponse) || ArrayHelper.isEmpty(attachToTangleResponse.trytes)) {
             throw new CryptoError("The attachToTangleRequest did not return a response");
-        } else {
-            return attachToTangleResponse.trytes.map(t => Trytes.fromString(t));
         }
+        return attachToTangleResponse.trytes.map(t => Trytes.fromString(t));
     }
 }
