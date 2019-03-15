@@ -132,8 +132,7 @@
 <a name='L84'></a><a href='#L84'>84</a>
 <a name='L85'></a><a href='#L85'>85</a>
 <a name='L86'></a><a href='#L86'>86</a>
-<a name='L87'></a><a href='#L87'>87</a>
-<a name='L88'></a><a href='#L88'>88</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L87'></a><a href='#L87'>87</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -202,22 +201,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { ArrayHelper } from "@iota-pico/core/dist/helpers/arrayHelper";
@@ -292,7 +290,7 @@ export class ProofOfWorkSrvIo implements IProofOfWork {
             trytes: trytes.map(t =&gt; t.toString())
         };
 &nbsp;
-        const additionalHeaders: { [id: string]: string } = { };
+        const additionalHeaders: { [id: string]: string } = {};
 &nbsp;
         if (this._apiKey) {
             additionalHeaders.Authorization = `powsrv-token ${this._apiKey}`;
@@ -302,9 +300,8 @@ export class ProofOfWorkSrvIo implements IProofOfWork {
 &nbsp;
         if (ObjectHelper.isEmpty(attachToTangleResponse) || ArrayHelper.isEmpty(attachToTangleResponse.trytes)) {
             throw new CryptoError("The attachToTangleRequest did not return a response");
-        } else {
-            return attachToTangleResponse.trytes.map(t =&gt; Trytes.fromString(t));
         }
+        return attachToTangleResponse.trytes.map(t =&gt; Trytes.fromString(t));
     }
 }
 &nbsp;</pre></td></tr>
